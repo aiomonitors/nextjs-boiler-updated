@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
+import styled from 
+	'styled-components';
 
 const IndexPage = () => {
 	const [counter, setCount] = useState(0);
@@ -12,7 +13,7 @@ const IndexPage = () => {
 				onClick={() => {
 					setCount(counter + 1); 
 				}}
-				disabled>
+			>
           Increment
 			</CounterButton>
 		</IndexPageWrapper>
