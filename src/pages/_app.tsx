@@ -1,4 +1,5 @@
 import App, {type AppProps} from 'next/app';
+import Head from 'next/head';
 import {createGlobalStyle} from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
 export default function MyApp({Component, pageProps}: AppProps) {
 	return (
 		<>
+			<Head>
+				<title>Next.js + TypeScript + Styled Components</title>
+			</Head>
 			<GlobalStyle />
 			<Component {...pageProps} />
 		</>
