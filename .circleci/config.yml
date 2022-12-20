@@ -31,6 +31,11 @@ commands:
       - run:
           description: 'Build Vercel Artifacts'
           command: yarn run vercel build --token=$VERCEL_TOKEN
+  build-vercel-prod:
+    steps:
+      - run:
+          description: 'Build Vercel Artifacts'
+          command: yarn run vercel build --prod --token=$VERCEL_TOKEN
   pull-vercel-preview:
     steps:
       - run:
@@ -80,7 +85,7 @@ jobs:
       - restore-cache
       - install-vercel
       - pull-vercel-production
-      - build-vercel
+      - build-vercel-prod
       - persist-vercel
       - save-cache
   deploy-preview:
